@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Helpdesk</title>
+</head>
+<body>
+	<form action='' id='form'>
+		Username <input type="text" name="usernamefield" id='usernamefield'>
+		Password <input type="password" name="passwordfield" id='passwordfield'>
+		<input type="submit" value="Login">
+	</form>
+	<div id="failedlogin" style="display: none;"> Incorrect login </div>
+</body>
+	<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$('#form').on('submit', (function(e){
+			e.preventDefault()
+			var username = $('#usernamefield').val()
+			var password = $('#passwordfield').val()
+			if(username === "admin"){
+				if(password === "Admin123"){
+					window.location.replace("main.html");
+				}
+			}
+			else{
+				$('#failedlogin').show()
+			}
+		}));
+	</script>
+</html>

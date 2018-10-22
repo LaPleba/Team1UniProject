@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Helpdesk</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<a href='' id='addbutton'> Add new ticket </a>
+	<div id='tickets'>
+	</div>
+</body>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		count = 1
+		$('#addbutton').on('click', function(e){
+			e.preventDefault()
+			var d = new Date();
+			$('#tickets').append("<div class=\"ticket\"> <form> <b>Date</b> "+ d +" <b>Issue Number</b>" + count +"<b>Issue Name</b> <input type=\"text\"> <b>Issue Type</b> <input type=\"text\"> <b>Issue Status</b> <input type=\"text\"> <b>Severity</b> <input type=\"text\"> <b>Operating System</b> <input type=\"text\"> <b>Software</b> <input type=\"text\"> <b>Description</b> <input type=\"text\"></form> </div>");
+			count += 1
+		});
+	</script>
+</html>
