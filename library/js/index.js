@@ -1,4 +1,3 @@
-//This stuff is in a seperate file because exposing passwords is dumb
 $('#form').on('submit', (function (e) {
     e.preventDefault();
     var username = $('#usernamefield').val();
