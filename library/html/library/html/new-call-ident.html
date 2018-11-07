@@ -46,10 +46,22 @@
             id: 1111111,
             name: "Problemo"
         });
-        //GET VALUE IN TEXT FIELD INTO VARIABLE
+        
+        $('#employeeidinput').on('keydown', function (e){        		
+        		if (e.keyCode == 13) {
+        			logIn();
+        		}
+        });
+        
+        
         $('#nextbutton').on('click', function(e){
             e.preventDefault();
-            var x = $('#employeeidinput').val();
+            logIn();
+        });
+        
+        //GET VALUE IN TEXT FIELD INTO VARIABLE
+        function logIn(){
+        		var x = $('#employeeidinput').val();
             if(x === ""){
                 $('#error').html("Could not find employee");
             }
@@ -61,10 +73,10 @@
                 }
                 else{
                     console.log("No such employee!")
-                    $('#error').innerHTML("Could not find employee");
+                    $('#error').html("Could not find employee");
                 }
             });
-        });
+        }
     </script>
 </body>
 </html>

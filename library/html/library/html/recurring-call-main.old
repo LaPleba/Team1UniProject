@@ -8,9 +8,12 @@
  </head>
 
 <body>
-        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin-left: 15%; margin-right: 15%; margin-top: 10%; ; margin-bottom: 5%">
+        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin-left: 10%; margin-right: 10%; margin-top: 10%; ; margin-bottom: 5%">
                 <div class="w3-container w3-center w3-margin-bottom">
                     <h1> Patrick Star <span class="w3-tag w3-deep-orange">Issue ID #8482</span> </h1>
+                    <div id="issuepath">
+								Areas/Group Area/No Elec                    
+                    </div>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Info </h1>
@@ -31,22 +34,23 @@
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Issue Definition </h1>
+
                     <div class="w3-bar w3-orange">
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubSoftware')">Software</a>
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubHardware')">Hardware</a>
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubAreas')">Areas</a>
+                        <a class="w3-bar-item w3-button" onclick="openMain('Software')">Software</a>
+                        <a class="w3-bar-item w3-button" onclick="openMain('Hardware')">Hardware</a>
+                        <a class="w3-bar-item w3-button" onclick="openMain('Areas')">Areas</a>
                     </div>
-                    <div class="w3-container w3-bar w3-amber folder" id="SubAreas" style="display:none">
+                    <div class="w3-container w3-bar w3-amber folder" id="Areas" style="display:none">
                         <a class="w3-bar-item w3-button" onclick="openSub('Offices')">Offices</a>
                         <a class="w3-bar-item w3-button" onclick="openSub('SocialAreas')">Social Areas</a>
                     </div>
-                    <div class="w3-container w3-bar w3-amber folder" id="SubSoftware" style="display:none">
+                    <div class="w3-container w3-bar w3-amber folder" id="Software" style="display:none">
                         <a class="w3-bar-item w3-button" onclick="openSub('DesktopOS')">D-OS</a>
                         <a class="w3-bar-item w3-button" onclick="openSub('MobileOS')">M-OS</a>
                         <a class="w3-bar-item w3-button" onclick="openSub('Network')">Network</a>
                         <a class="w3-bar-item w3-button" onclick="openSub('Program')">Programs</a>
                     </div>
-                    <div class="w3-container w3-bar w3-amber folder" id="SubHardware" style="display:none">
+                    <div class="w3-container w3-bar w3-amber folder" id="Hardware" style="display:none">
                         <a class="w3-bar-item w3-button" onclick="openSub('DesktopDevice')">Desktop</a>
                         <a class="w3-bar-item w3-button" onclick="openSub('MobileDevice')">Mobile</a>
                         <a class="w3-bar-item w3-button" onclick="openSub('Projector')">Projector</a>
@@ -156,6 +160,9 @@
                 </div>
              </div>
     <script>
+    
+    var path = [];
+    var pathname = "";
         function openMain(Name) {
             var z;
             var r = document.getElementsByClassName("folder");
@@ -163,6 +170,8 @@
                r[z].style.display = "none";
             }
             document.getElementById(Name).style.display = "block";
+            pathname = Name;
+            document.getElementById("issuepath").innerHTML = pathname;
         }
         function openSub(subName) {
             var i;
@@ -171,6 +180,12 @@
                 x[i].style.display = "none";
             }
             document.getElementById(subName).style.display = "block";
+            pathname += "/"+subName;
+				document.getElementById("issuepath").innerHTML = pathname;
+        }
+        
+        function upLevel(){
+        		path.pop();
         }
     </script>
 
