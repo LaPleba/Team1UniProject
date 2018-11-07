@@ -20,7 +20,7 @@
                 <a href="main.html" class="w3-margin-top w3-button w3-border w3-hover-red w3-margin-bottom w3-padding-large w3-round-xxlarge"> < Back </a>
                 <a id="nextbutton" href="new-call-main.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Next > </a>
                 <br>
-                <a href="#" class="w3-button w3-hover-orange w3-round-xlarge"> Click here for other options </a>
+                <a href="#" class="w3-button w3-hover-orange w3-round-xlarge"> Employee Search </a>
              </div>
          </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,10 +46,22 @@
             id: 1111111,
             name: "Problemo"
         });
-        //GET VALUE IN TEXT FIELD INTO VARIABLE
+        
+        $('#employeeidinput').on('keydown', function (e){        		
+        		if (e.keyCode == 13) {
+        			logIn();
+        		}
+        });
+        
+        
         $('#nextbutton').on('click', function(e){
             e.preventDefault();
-            var x = $('#employeeidinput').val();
+            logIn();
+        });
+        
+        //GET VALUE IN TEXT FIELD INTO VARIABLE
+        function logIn(){
+        		var x = $('#employeeidinput').val();
             if(x === ""){
                 $('#error').html("Could not find employee");
             }
@@ -61,10 +73,10 @@
                 }
                 else{
                     console.log("No such employee!")
-                    $('#error').innerHTML("Could not find employee");
+                    $('#error').html("Could not find employee");
                 }
             });
-        });
+        }
     </script>
 </body>
 </html>
