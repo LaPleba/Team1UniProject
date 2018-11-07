@@ -10,7 +10,7 @@
 <body>
     <div class="w3-display-container" style="height:50rem;">
             <div class="w3-display-middle w3-card w3-white w3-padding-large w3-round-xlarge">
-                <img src="../img/logo.png" height="60rem">
+                <img src="logo.png" height="60rem">
                 <p style="text-align: center;"> <b>Operator's Station</b> </p>
                 <hr class="w3-margin-bottom">
                 <p>Username
@@ -49,17 +49,6 @@
                 $('#failedlogin').show()
             }
         }));
-    </script>
-    <!-- Testing Firebase Collection Database -->
-    <script type="text/javascript">
-        var db = firebase.firestore();
-        db.settings({
-          timestampsInSnapshots: true
-        });
-        db.collection("tasks").doc("1111111").set({
-            id: 1111111,
-            name: "Problemo"
-        });
     </script>
 </body>
 </html>
