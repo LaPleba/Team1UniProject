@@ -8,101 +8,104 @@
  </head>
 
 <body>
-        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin-left: 15%; margin-right: 15%; margin-top: 10%; ; margin-bottom: 5%">
+        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin-left: 2%; margin-right: 2%; margin-top: 2%; ; margin-bottom: 2%">
                 <div class="w3-container w3-center w3-margin-bottom">
                     <h1> Patrick Star <span class="w3-tag w3-deep-orange">Issue ID #8482</span> </h1>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Info </h1>
-                    <ul class="w3-ul" style="text-align: left; overflow: auto; white-space: nowrap; max-height: 15rem;">
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
                         <li>ID: <b> A1234</b></li>
+                        <li>Name: <b>Patrick Star</b></li>
                         <li>Dept: <b>Project Accounting</b></li>
-                        <li>Pos: <b>Deputy Team Lead</b></li>
+                        <li>Role: <b>Deputy Team Lead</b></li>
                         <li>Mail: <b>p.star@makeitall.com</b></li>
                         <li>Num: <b>07413012084</b></li>
                         <li>Office: <b>Room 3.21</b></li>
-                        <li>Desktop Model: <b>HP Desk8300</b></li>
+                    </ul>
+                    <h1> Known Hardware </h1>
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
+                        <li>Printers: <b>HP Desk8300</b></li>
                         <li>Desktop OS: <b>Windows 7 Pro</b></li>
-                        <li>Mobile Model: <b>Apple iPad Pro 12.9</b></li>
+                        <li>Mobile OS: <b>Apple iPad Pro 12.9</b></li>
                         <li>Mobile OS: <b>iOS 12.1.1</b></li>
                         <li>LSoft: <b>AutoCAD ArduinoIDE NX11</b></li>
                         <li>USoft: <b>None</b></li>
-                    </ul>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Issue Definition </h1>
                     <div class="w3-bar w3-orange">
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubSoftware')">Software</a>
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubHardware')">Hardware</a>
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubAreas')">Areas</a>
+                        <a class="w3-bar-item w3-button " onclick="openMain('SubSoftware')">Software</a>
+                        <a class="w3-bar-item w3-button " onclick="openMain('SubHardware')">Hardware</a>
+                        <a class="w3-bar-item w3-button " onclick="openMain('SubAreas')">Areas</a>
                     </div>
                     <div class="w3-container w3-bar w3-amber folder" id="SubAreas" style="display:none">
-                        <a class="w3-bar-item w3-button" onclick="openSub('Offices')">Offices</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('SocialAreas')">Social Areas</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('Offices')">Offices</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('SocialAreas')">Social Areas</a>
                     </div>
                     <div class="w3-container w3-bar w3-amber folder" id="SubSoftware" style="display:none">
-                        <a class="w3-bar-item w3-button" onclick="openSub('DesktopOS')">D-OS</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('MobileOS')">M-OS</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Network')">Network</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Program')">Programs</a>
+                        <a class="w3-bar-item w3-button" onclick="openSub('DesktopOS')">Desktop OS</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('MobileOS')">Mobile OS</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('Network')">Network</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('Program')">Programs</a>
                     </div>
                     <div class="w3-container w3-bar w3-amber folder" id="SubHardware" style="display:none">
-                        <a class="w3-bar-item w3-button" onclick="openSub('DesktopDevice')">Desktop</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('MobileDevice')">Mobile</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Projector')">Projector</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Printer')">Printer</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('DesktopDevice')">Desktop</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('MobileDevice')">Mobile</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('Projector')">Projector</a>
+                        <a class="w3-bar-item w3-button " onclick="openSub('Printer')">Printer</a>
                     </div>
                     <div id="Offices" class="w3-container sub" style="display:none">
                         <h3>Areas > Offices</h3>
                         <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Internet </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Elec </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> No Internet </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> No Elec </a>
                         </div>
                     </div>
                     <div id="SocialAreas" class="w3-container sub" style="display:none">
                         <h3>Areas > Social Areas</h3>
                         <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Internet </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Elec </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Peripheral Problem </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Missing Equipment </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> No Internet </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> No Elec </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Peripheral Problem </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Missing Equipment </a>
                         </div>
                     </div>
                     <div id="DesktopOS" class="w3-container sub" style="display:none">
-                        <h3>Software > D-OS</h3>
+                        <h3>Software > Desktop OS</h3>
                         <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Login Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Update Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Peripheral Recog </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Software Install </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Login Issue </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Update Issue </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Peripheral Recog </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Software Install </a>
                         </div>
                     </div>
                     <div id="MobileOS" class="w3-container sub" style="display:none">
-                        <h3>Software > M-OS</h3>
+                        <h3>Software > Mobile OS</h3>
                         <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Login Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Update Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Peripheral Recog </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Software Install </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Login Issue </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Update Issue </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Peripheral Recog </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton"> Software Install </a>
                         </div>
                     </div>
                     <div id="Network" class="w3-container sub" style="display:none">
                         <h3>Software > Network</h3>
                         <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Internet Down</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Cloud</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Server Auth</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Peripheral Access</a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Internet Down</a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Cloud</a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Server Auth</a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Peripheral Access</a>
                         </div>
                     </div>
 
                     <div id="Program" class="w3-container sub" style="display:none">
                         <h3>Software > Programs</h3>
                         <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Licensing</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Permissions </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Wrong Install</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Bad Config </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Licensing</a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Permissions </a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Wrong Install</a>
+                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue issuebutton">Bad Config </a>
                         </div>
                     </div>
                     <div id="DesktopDevice" class="w3-container sub" style="display:none">
@@ -140,16 +143,25 @@
                             <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Colour </a>
                         </div>
                     </div>
+                    <div id="issuedefined">
+                        
+                    </div>
+                    <div id="issuedefinedform" style='visibility: hidden;'>
+                        Serial Number<input type='text'>
+                        Operating System<input type='text'>
+                        Software<input type='text'>
+
+                    </div>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Extra Notes </h1>
                     <form>
-                        <textarea style="width: 80%; height: 15rem; resize: none;" class="w3-center w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
+                        <textarea style="width: 80%; min-height: 30rem; resize: none;" class="w3-center w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
                     </form>
                 </div>
                 <div class="w3-container w3-center w3-padding-top">
-                    <a href="new-call-ident" class="w3-margin-top w3-button w3-border w3-hover-red w3-margin-bottom w3-padding-large w3-round-xxlarge"> < Back </a>
-                    <a href="new-call-done" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Assign to Self </a>
+                    <a href="../html/new-call-ident.html" class="w3-margin-top w3-button w3-border w3-hover-red w3-margin-bottom w3-padding-large w3-round-xxlarge"> < Back </a>
+                    <a href="../html/new-call-done.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Assign to Self </a>
                     <a href="new-call-specialist" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Assign to Specialist</a>
                     <br>
                     <p> Review data before next stage </p>
@@ -172,8 +184,17 @@
             }
             document.getElementById(subName).style.display = "block";
         }
+
     </script>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.issuebutton').click(function(e){
+        e.preventDefault();
+        x = this.innerHTML
+        console.log(x)
+        $('#issuedefined').html(x)
+    });
+</script>
 </body>
 </html>
