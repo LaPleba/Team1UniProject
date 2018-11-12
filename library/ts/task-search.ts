@@ -53,9 +53,9 @@ class TaskCard
 
 function searchHandler()
 {
+    $(".searchResults").children().remove();
     let searchQuery: string = <string> $("#taskSearchBox").val(); // Gets the searchbox value
     getQueryResults(searchQuery);
-
 }
 function addCards(listOfCards: string[])
 {

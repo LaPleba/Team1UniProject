@@ -29,6 +29,7 @@ var TaskCard = /** @class */ (function () {
     return TaskCard;
 }());
 function searchHandler() {
+    $(".searchResults").children().remove();
     var searchQuery = $("#taskSearchBox").val(); // Gets the searchbox value
     getQueryResults(searchQuery);
 }
