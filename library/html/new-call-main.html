@@ -8,53 +8,53 @@
  </head>
 
 <body>
-    <!-- Sidebar -->
-    <div class="w3-sidebar w3-animate-left w3-bar-block w3-border-right" style="display:none" id="sidebar">
-      <button onclick="sidebar_close()" class="w3-bar-item w3-large">Close &times;</button>
-      <p class="w3-bar-item w3-xxlarge">Alice Peterson</p><br>
-      <a href="#" class="w3-bar-item w3-hover-green w3-xlarge w3-button">Start Break</a>
-      <a href="#" class="w3-bar-item w3-xlarge w3-hover-red w3-button">Log Off</a>
-    </div>
-    <button class="w3-button w3-round-xxlarge w3-white w3-margin-top w3-xlarge" style="border-radius: 0px 15px 15px 0px; "onclick="sidebar_open()">More</button>
-
-    <!-- Page Content -->
-        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin:2%;">
+        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin: 2%;">
                 <div class="w3-container w3-center w3-margin-bottom">
                     <h1> Patrick Star <span class="w3-tag w3-deep-orange">Issue ID #8482</span> </h1>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Info </h1>
-                    <ul class="w3-ul" style="text-align: left; overflow: auto; white-space: nowrap; max-height: 25rem;">
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
                         <li>ID: <b> A1234</b></li>
+                        <li>Name: <b>Patrick Star</b></li>
                         <li>Dept: <b>Project Accounting</b></li>
-                        <li>Pos: <b>Deputy Team Lead</b></li>
+                        <li>Role: <b>Deputy Team Lead</b></li>
                         <li>Mail: <b>p.star@makeitall.com</b></li>
                         <li>Num: <b>07413012084</b></li>
                         <li>Office: <b>Room 3.21</b></li>
-                        <li>Desktop Model: <b>HP Desk8300</b></li>
-                        <li>Desktop OS: <b>Windows 7 Pro</b></li>
-                        <li>Mobile Model: <b>Apple iPad Pro 12.9</b></li>
-                        <li>Mobile OS: <b>iOS 12.1.1</b></li>
-                        <li>Software: <b>AutoCAD ArduinoIDE NX11</b></li>
                     </ul>
+                    <h1> Known Hardware </h1>
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
+                        <li>Printers: <b>HP Desk8300</b></li>
+                        <li>Desktop OS: <b>Windows 7 Pro</b></li>
+                        <li>Mobile OS: <b>Apple iPad Pro 12.9</b></li>
+                        <li>Mobile OS: <b>iOS 12.1.1</b></li>
+                        <li>LSoft: <b>AutoCAD ArduinoIDE NX11</b></li>
+                        <li>USoft: <b>None</b></li>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Issue Definition </h1>
                     <div class="w3-bar w3-border">
-							<div class="w3-button" style="display: inline-block;" id="up" onclick="upLevel();">< back</div>
-							<div class="w3-border" id="path" style="display: inline-block; width: 75%; text-align: left;">Hello there</div>
+							<div class="w3-button" style="display: inline-block;" id="up" onclick="upLevel();">Up</div>
+							<div class="w3-border" id="path" style="display: inline-block; width: 75%; text-align: left;">Hello there</div>                    
                     </div>
-
+                    
                     <div id="issueBrowser" style="overflow-y: scroll; width:100%;">
+                    
+                    </div>
+					<div id="issuedefinedform" style=''>
+                        Serial Number<input type='text'><br>
+                        Operating System<input type='text'><br>
+                        Software<input type='text'>
 
                     </div>
                     </div>
 
-
+                    
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Extra Notes </h1>
                     <form>
-                        <textarea style="width: 100%; height: 25rem; resize: none;" class="w3-center w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
+                        <textarea style="width: 100%; height: 15rem; resize: none;" class="w3-center w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
                     </form>
                 </div>
                 <div class="w3-container w3-center w3-padding-top">
@@ -65,91 +65,17 @@
                     <p> Review data before next stage </p>
                 </div>
              </div>
-	<script src="../js/issues.js"></script>
-    <script>
-	loadPath([]);
-
-    var path = [];
-    var pathname = "";
-        /*function openMain(Name) {
-            var z;
-            var r = document.getElementsByClassName("folder");
-            for (z = 0; z < r.length; z++) {
-               r[z].style.display = "none";
-            }
-            document.getElementById(Name).style.display = "block";
-            pathname = Name;
-            document.getElementById("issuepath").innerHTML = pathname;
-        }
-        function openSub(subName) {
-            var i;
-            var x = document.getElementsByClassName("sub");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            document.getElementById(subName).style.display = "block";
-            pathname += "/"+subName;
-				document.getElementById("issuepath").innerHTML = pathname;
-        }*/
-
-        function upLevel(){
-        		path.pop();
-        		loadPath(path);
-        }
-
-        //This function adds items visually to the issueBrowser box
-        function addItem(item, index) {
-        		document.getElementById("issueBrowser").innerHTML += "<div class='w3-button w3-bar' id='"+index+"' onclick='openItem("+index+")'>"+item+"</div>";
-        }
-
-        //This opens items in the issueBrowser box
-        function openItem(item) {
-            if (path.length<2) {
-        			path[path.length] = item;
-        			loadPath(path);
-        		}
-        		else {
-        			loadPath(path);
-        			document.getElementById(item).className = "w3-button w3-bar w3-blue";
-        		}
-        }
-
-        //this function takes an array of integers, to a maximum length of 2, and opens the corresponding file path
-        function loadPath(path){
-        		document.getElementById("issueBrowser").innerHTML = "";
-        		switch(path.length) {
-        			case 0:
-        				for (var x = 0; x<issues.length; x++) {
-        					addItem(issues[x][0], x);
-        				}
-        				pathname="/";
-        				break;
-
-        			case 1:
-        				for (var x = 1; x<issues[path[0]].length; x++) {
-        					addItem(issues[path[0]][x][0], x)
-        				}
-        				pathname="/"+issues[path[0]][0].toString()+"/";
-        				break;
-
-        			case 2:
-        				for (var x = 1; x<issues[path[0]][path[1]].length; x++) {
-        					addItem(issues[path[0]][path[1]][x], x)
-        				}
-        				pathname="/"+issues[path[0]][0]+"/"+issues[path[0]][path[1]][0];
-        				break;
-        		}
-        		document.getElementById("path").innerHTML = pathname;
-
-        }
-        function sidebar_open() {
-            document.getElementById("sidebar").style.display = "block";
-        }
-
-        function sidebar_close() {
-            document.getElementById("sidebar").style.display = "none";
-        }
-        </script>
+	<script src="../js/issues.js"></script>    
+    <script src="../js/new-call-main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#item').click(function(e){
+        e.preventDefault();
+        x = this.innerHTML
+        console.log(x)
+        $('#issuedefined').html(x)
+    });
+</script>
 
 
 </body>
