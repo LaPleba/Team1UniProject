@@ -81,8 +81,6 @@ function getTaskFromDoc(doc: any): TaskCard
 {
     let task: TaskCard;
     let taskData: any = doc.data();
-    console.log(taskData["ID"] + taskData["Name"] + taskData["MainType"] + taskData["SubType"] + taskData["Problem"] + taskData["AssignedTo"] +
-    taskData["Urgency"] + taskData["Additional"]);
     task = new TaskCard(taskData["ID"], taskData["Name"], taskData["MainType"], taskData["SubType"], taskData["Problem"], taskData["AssignedTo"],
                         taskData["Urgency"], taskData["Additional"]);
 

@@ -52,8 +52,6 @@ function getQueryResults(searchQuery) {
 function getTaskFromDoc(doc) {
     var task;
     var taskData = doc.data();
-    console.log(taskData["ID"] + taskData["Name"] + taskData["MainType"] + taskData["SubType"] + taskData["Problem"] + taskData["AssignedTo"] +
-        taskData["Urgency"] + taskData["Additional"]);
     task = new TaskCard(taskData["ID"], taskData["Name"], taskData["MainType"], taskData["SubType"], taskData["Problem"], taskData["AssignedTo"], taskData["Urgency"], taskData["Additional"]);
     return task;
 }
