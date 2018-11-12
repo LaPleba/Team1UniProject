@@ -42,6 +42,10 @@
                     <div id="issueBrowser" style="overflow-y: scroll; width:100%;">
                     
                     </div>
+					
+					<div id="phonecalls"></div>
+					
+					
                     </div>
 
                     
@@ -69,26 +73,6 @@
     
     var path = [0,1];
     var pathname = "";
-        /*function openMain(Name) {
-            var z;
-            var r = document.getElementsByClassName("folder");
-            for (z = 0; z < r.length; z++) {
-               r[z].style.display = "none";
-            }
-            document.getElementById(Name).style.display = "block";
-            pathname = Name;
-            document.getElementById("issuepath").innerHTML = pathname;
-        }
-        function openSub(subName) {
-            var i;
-            var x = document.getElementsByClassName("sub");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            document.getElementById(subName).style.display = "block";
-            pathname += "/"+subName;
-				document.getElementById("issuepath").innerHTML = pathname;
-        }*/
         
         function upLevel(){
         		path.pop();
