@@ -65,7 +65,7 @@ function createHTMLTaskCards(taskArray) {
         newCard += "<div>Name: " + task.name + "</div>";
         newCard += "<div>Type: " + task.mainType + "</div>";
         newCard += "<div>Sub Type: " + task.subType + "</div>";
-        newCard += "<div>Problem" + task.problem + "</div>";
+        newCard += "<div>Problem: " + task.problem + "</div>";
         newCard += "<div>Assigned To: " + task.assignedTo + "</div>";
         newCard += "<div>Urgency: " + task.urgency + "</div>";
         newCard += "<div>Additional Information: " + task.additionalInfo + "</div>";
