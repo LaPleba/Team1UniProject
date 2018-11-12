@@ -8,143 +8,47 @@
  </head>
 
 <body>
-        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin-left: 15%; margin-right: 15%; margin-top: 10%; ; margin-bottom: 5%">
+        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin-left: 10%; margin-right: 10%; margin-top: 10%; ; margin-bottom: 5%">
                 <div class="w3-container w3-center w3-margin-bottom">
                     <h1> Patrick Star <span class="w3-tag w3-deep-orange">Issue ID #8482</span> </h1>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Info </h1>
-                    <ul class="w3-ul" style="text-align: left; overflow: auto; white-space: nowrap; max-height: 15rem;">
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
                         <li>ID: <b> A1234</b></li>
+                        <li>Name: <b>Patrick Star</b></li>
                         <li>Dept: <b>Project Accounting</b></li>
-                        <li>Pos: <b>Deputy Team Lead</b></li>
+                        <li>Role: <b>Deputy Team Lead</b></li>
                         <li>Mail: <b>p.star@makeitall.com</b></li>
                         <li>Num: <b>07413012084</b></li>
                         <li>Office: <b>Room 3.21</b></li>
-                        <li>Desktop Model: <b>HP Desk8300</b></li>
+                    </ul>
+                    <h1> Known Hardware </h1>
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
+                        <li>Printers: <b>HP Desk8300</b></li>
                         <li>Desktop OS: <b>Windows 7 Pro</b></li>
-                        <li>Mobile Model: <b>Apple iPad Pro 12.9</b></li>
+                        <li>Mobile OS: <b>Apple iPad Pro 12.9</b></li>
                         <li>Mobile OS: <b>iOS 12.1.1</b></li>
                         <li>LSoft: <b>AutoCAD ArduinoIDE NX11</b></li>
                         <li>USoft: <b>None</b></li>
-                    </ul>
                 </div>
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Issue Definition </h1>
-                    <div class="w3-bar w3-orange">
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubSoftware')">Software</a>
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubHardware')">Hardware</a>
-                        <a class="w3-bar-item w3-button" onclick="openMain('SubAreas')">Areas</a>
+                    <div class="w3-bar w3-border">
+							<div class="w3-button" style="display: inline-block;" id="up" onclick="upLevel();">Up</div>
+							<div class="w3-border" id="path" style="display: inline-block; width: 75%; text-align: left;">Hello there</div>                    
                     </div>
-                    <div class="w3-container w3-bar w3-amber folder" id="SubAreas" style="display:none">
-                        <a class="w3-bar-item w3-button" onclick="openSub('Offices')">Offices</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('SocialAreas')">Social Areas</a>
+                    
+                    <div id="issueBrowser" style="overflow-y: scroll; width:100%;">
+                    
                     </div>
-                    <div class="w3-container w3-bar w3-amber folder" id="SubSoftware" style="display:none">
-                        <a class="w3-bar-item w3-button" onclick="openSub('DesktopOS')">D-OS</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('MobileOS')">M-OS</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Network')">Network</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Program')">Programs</a>
-                    </div>
-                    <div class="w3-container w3-bar w3-amber folder" id="SubHardware" style="display:none">
-                        <a class="w3-bar-item w3-button" onclick="openSub('DesktopDevice')">Desktop</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('MobileDevice')">Mobile</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Projector')">Projector</a>
-                        <a class="w3-bar-item w3-button" onclick="openSub('Printer')">Printer</a>
-                    </div>
-                    <div id="Offices" class="w3-container sub" style="display:none">
-                        <h3>Areas > Offices</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Internet </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Elec </a>
-                        </div>
-                    </div>
-                    <div id="SocialAreas" class="w3-container sub" style="display:none">
-                        <h3>Areas > Social Areas</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Internet </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Elec </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Peripheral Problem </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Missing Equipment </a>
-                        </div>
-                    </div>
-                    <div id="DesktopOS" class="w3-container sub" style="display:none">
-                        <h3>Software > D-OS</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Login Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Update Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Peripheral Recog </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Software Install </a>
-                        </div>
-                    </div>
-                    <div id="MobileOS" class="w3-container sub" style="display:none">
-                        <h3>Software > M-OS</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Login Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Update Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Peripheral Recog </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Software Install </a>
-                        </div>
-                    </div>
-                    <div id="Network" class="w3-container sub" style="display:none">
-                        <h3>Software > Network</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Internet Down</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Cloud</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Server Auth</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Peripheral Access</a>
-                        </div>
                     </div>
 
-                    <div id="Program" class="w3-container sub" style="display:none">
-                        <h3>Software > Programs</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Licensing</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Permissions </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Wrong Install</a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue">Bad Config </a>
-                        </div>
-                    </div>
-                    <div id="DesktopDevice" class="w3-container sub" style="display:none">
-                        <h3>Hardware > Desktop</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Won't Turn ON </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Driver Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Very Slow </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Individual Component</a>
-                        </div>
-                    </div>
-                    <div id="MobileDevice" class="w3-container sub" style="display:none">
-                        <h3>Hardware > Mobile</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Won't Turn ON </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Driver Issue </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Very Slow </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Individual Component</a>
-                        </div>
-                    </div>
-                    <div id="Projector" class="w3-container sub" style="display:none">
-                        <h3>Hardware > Projector</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Won't Turn ON  </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Computer Recog </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Bulb Warning </a>
-                        </div>
-                    </div>
-                    <div id="Printer" class="w3-container sub" style="display:none">
-                        <h3>Hardware > Printer</h3>
-                        <div class="w3-bar">
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Won't Turn ON </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> Won't Print </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Ink </a>
-                            <a href="#" class="w3-button w3-bar-item w3-border w3-hover-blue"> No Colour </a>
-                        </div>
-                    </div>
-                </div>
+                    
                 <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Extra Notes </h1>
                     <form>
-                        <textarea style="width: 80%; height: 15rem; resize: none;" class="w3-center w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
+                        <textarea style="width: 100%; height: 15rem; resize: none;" class="w3-center w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
                     </form>
                 </div>
                 <div class="w3-container w3-center w3-padding-top">
@@ -155,14 +59,22 @@
                     <p> Review data before next stage </p>
                 </div>
              </div>
+	<script src="../js/issues.js"></script>    
     <script>
-        function openMain(Name) {
+	loadPath([0,1]);
+	document.getElementById(1).className = "w3-button w3-bar w3-blue";
+    
+    var path = [0,1];
+    var pathname = "";
+        /*function openMain(Name) {
             var z;
             var r = document.getElementsByClassName("folder");
             for (z = 0; z < r.length; z++) {
                r[z].style.display = "none";
             }
             document.getElementById(Name).style.display = "block";
+            pathname = Name;
+            document.getElementById("issuepath").innerHTML = pathname;
         }
         function openSub(subName) {
             var i;
@@ -171,6 +83,59 @@
                 x[i].style.display = "none";
             }
             document.getElementById(subName).style.display = "block";
+            pathname += "/"+subName;
+				document.getElementById("issuepath").innerHTML = pathname;
+        }*/
+        
+        function upLevel(){
+        		path.pop();
+        		loadPath(path);
+        }
+        
+        //This function adds items visually to the issueBrowser box
+        function addItem(item, index) {
+        		document.getElementById("issueBrowser").innerHTML += "<div class='w3-button w3-bar' id='"+index+"' onclick='openItem("+index+")'>"+item+"</div>";
+        }
+        
+        //This opens items in the issueBrowser box
+        function openItem(item) {
+            if (path.length<2) {
+        			path[path.length] = item;
+        			loadPath(path);
+        		}
+        		else {
+        			loadPath(path);
+        			document.getElementById(item).className = "w3-button w3-bar w3-blue";
+        		}
+        }
+        
+        //this function takes an array of integers, to a maximum length of 2, and opens the corresponding file path
+        function loadPath(path){
+        		document.getElementById("issueBrowser").innerHTML = "";
+        		switch(path.length) {
+        			case 0:
+        				for (var x = 0; x<issues.length; x++) {
+        					addItem(issues[x][0], x);
+        				}
+        				pathname="/";
+        				break;
+        				
+        			case 1:
+        				for (var x = 1; x<issues[path[0]].length; x++) {
+        					addItem(issues[path[0]][x][0], x)
+        				}
+        				pathname="/"+issues[path[0]][0].toString()+"/";
+        				break;
+        				
+        			case 2:
+        				for (var x = 1; x<issues[path[0]][path[1]].length; x++) {
+        					addItem(issues[path[0]][path[1]][x], x)
+        				}
+        				pathname="/"+issues[path[0]][0]+"/"+issues[path[0]][path[1]][0];
+        				break;
+        		}
+        		document.getElementById("path").innerHTML = pathname;
+        		
         }
     </script>
 

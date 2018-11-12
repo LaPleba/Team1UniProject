@@ -5,32 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/main.css">
-    <style>
-    .ticket-red{
-			border-left: 1rem solid red;
-			background-color: #ff9999;
-			padding: 0.5rem;
-			width: 100%;    
-    }
-    
-    .ticket-orange{
-			border-left: 1rem solid orange;
-			background-color: #ffd280;
-			padding: 0.5rem;
-			width: 100%;    
-    }
-    
-    .ticket-yellow{
-			border-left: 1rem solid yellow;
-			background-color: #ffff99;
-			padding: 0.5rem;
-			width: 100%;    
-    }
-    
-    .dropdown-hover:hover .dropdown-content{display: block;}
-    
-    .dropdown-content{display: none;}
-    </style>
+    <link rel="stylesheet" href="../css/additional.css">
  </head>
 
 <body>
@@ -40,11 +15,12 @@
           <a href="recurring-call-ident.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Recurring (Self) </a>
           <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Recurring (Branch) </a>
       </div>-->
-      <div class="w3-padding" style="text-align: center; width: 66%; float: left;">
+      <div class="w3-padding w3-twothird" style="text-align: center;">
           <h1> Tasks </h1>
           <a href="new-call-ident.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> New Call </a>
           <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> View Assigned Calls </a>
-          <ul class="w3-ul" style="text-align: right; overflow: auto; white-space: nowrap; max-height: 15rem;">
+          <a href="task-search.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Search Calls</a>
+		  <ul class="w3-ul" style="text-align: right; overflow: auto; white-space: nowrap; max-height: 15rem;">
             <li><a href="recurring-call-main.html" class="w3-btn ticket-red"> Hardware/Desktop/Driver Issue </a></li>
             <li><a href="recurring-call-main.html" class="w3-btn ticket-red"> Software/Network/Cloud </a></li>
             <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"> Areas/Social Areas/Missing Equipment </a></li>
@@ -70,7 +46,7 @@
   
 	<div class="w3-bar w3-top" style="background: white; line-height: 100%;">
 	<span class="w3-display-left">admin</span>
-	<span class="w3-right w3-display-middle w3-button w3-round-xxlarge w3-hover-blue w3-border">Status: Online <span style="color: green;">&#9899;</span></span>
+	<span class="w3-right w3-display-middle w3-button w3-round-xxlarge w3-hover-blue w3-border">Status: Online <span style="color: green;">&#8226;</span></span>
 	<a id="logout" href="login.html" class="w3-button w3-border w3-hover-red w3-round-xxlarge w3-right"> Log Off </a>
 
 	</div>
