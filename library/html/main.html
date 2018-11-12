@@ -5,90 +5,60 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/main.css">
-    <style>
-
-    body{
-
-    }
-    .ticket-red{
-			border-left: 1rem solid red;
-			background-color: #ff9999;
-			padding: 0.5rem;
-			width: 100%;
-    }
-
-    .ticket-orange{
-			border-left: 1rem solid orange;
-			background-color: #ffd280;
-			padding: 0.5rem;
-			width: 100%;
-    }
-
-    .ticket-yellow{
-			border-left: 1rem solid yellow;
-			background-color: #ffff99;
-			padding: 0.5rem;
-			width: 100%;
-    }
-
-    .ticket-blue{
-			border-left: 1rem solid blue;
-			background-color: lightblue;
-			padding: 0.5rem;
-			width: 100%;
-    }
-    .dropdown-hover:hover .dropdown-content{display: block;}
-
-    .dropdown-content{display: none;}
-    </style>
+    <link rel="stylesheet" href="../css/additional.css">
  </head>
 
 <body>
-    <!-- Sidebar -->
-    <div class="w3-sidebar w3-animate-left w3-bar-block w3-border-right" style="display:none" id="sidebar">
-      <button onclick="sidebar_close()" class="w3-bar-item w3-large">Close &times;</button>
-      <p class="w3-bar-item w3-xxlarge">Alice Peterson</p><br>
-      <a href="#" class="w3-bar-item w3-hover-green w3-xlarge w3-button">Start Break</a>
-      <a href="#" class="w3-bar-item w3-xlarge w3-hover-red w3-button">Log Off</a>
-    </div>
-    <button class="w3-button w3-round-xxlarge w3-white w3-margin-top w3-xlarge" style="border-radius: 0px 15px 15px 0px; "onclick="sidebar_open()">More</button>
-
-    <!-- Page Content -->
-
-    <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin: 5%;">
-          <div class="w3-padding w3-twothird" style="text-align: center;">
-              <h1> My Tasks </h1>
-              <a href="new-call-ident.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> New Call </a>
-              <a href="recurring-call-ident.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Recurring Call </a>
-              <ul class="w3-ul" style="text-align: right; overflow: auto; white-space: nowrap; max-height: 20rem;">
-                <li><a href="feedback-request.html" class="w3-btn ticket-blue"><b>Feedback Request</b></b> pending for <b>3 hours</b><a></li>
-                <li><a href="existing-call.html" class="w3-btn ticket-red"><b>Hardware/Desktop/Driver Issue</b> due in <b>2 hours</b><a></li>
-                <li><a href="existing-call.html" class="w3-btn ticket-red"><b> Software/Network/Cloud </b>due in <b>3 days</b></a></li>
-                <li><a href="existing-call.html" class="w3-btn ticket-orange"> <b>Software/DesktopOS/Login Issue </b>due in <b>4 days</b></a></li>
-                <li><a href="existing-call.html" class="w3-btn ticket-yellow"> <b>Software/M-OS/Update Issue</b> due in <b>6 days</b></a></li>
-              </ul>
-          </div>
-          <div class="w3-rest w3-padding" style="text-align: center;">
-               <h1> Actions </h1>
-               <a href="all-calls.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> View All Assigned Calls </a><br>
-               <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> My Activity </a><br>
-               <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> Re-call Last </a><br>
-          </div>
+  <div class="w3-card w3-row w3-white w3-padding-large w3-round-xlarge" style="margin-left: 15%; margin-right: 15%; margin-top: 10%; margin-bottom: 5%">
+      <!--<div class="w3-padding w3-third" style="text-align: center;">
+          <h1> Calls </h1>
+          <a href="recurring-call-ident.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Recurring (Self) </a>
+          <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Recurring (Branch) </a>
+      </div>-->
+      <div class="w3-padding w3-twothird" style="text-align: center;">
+          <h1> Tasks </h1>
+          <a href="new-call-ident.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> New Call </a>
+          <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> View Assigned Calls </a>
+          <a href="task-search.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Search Calls</a>
+		  <h2>Most Urgent Calls</h2>
+		  <ul class="w3-ul" style="overflow: auto; white-space: nowrap; max-height: 15rem;">
+            <li><a href="recurring-call-main.html" class="w3-btn ticket-red"> <span class="w3-tag w3-deep-orange">Issue ID #8482</span> Hardware/Desktop/Driver Issue </a></li>
+            <li><a href="recurring-call-main.html" class="w3-btn ticket-red"> <span class="w3-tag w3-deep-orange">Issue ID #8482</span> Software/Network/Cloud </a></li>
+            <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"> <span class="w3-tag w3-deep-orange">Issue ID #8482</span> Areas/Social Areas/Missing Equipment </a></li>
+            <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"> <span class="w3-tag w3-deep-orange">Issue ID #8482</span> Areas/Offices/No AC </a></li>
+            <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"> <span class="w3-tag w3-deep-orange">Issue ID #8482</span> Software/M-OS/Update Issue</a></li>
+          </ul>
       </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script type="text/javascript">
-        $('#logout').on('click', (function(e){
-          e.preventDefault()
-          window.location.replace("login.html");
-        }));
+      <div class="w3-third w3-padding" style="text-align: center;">
+           <h1> Actions </h1>
+           <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> My Activity </a><br>
+           <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> Re-call Last </a><br>
+           <div class="w3-dropdown-hover">
+               <a class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-margin-bottom w3-padding-large w3-round-xxlarge"> My Status </a>
+               <div class="w3-dropdown-content w3-bar-block w3-border">
+                 <a href="#" class="w3-bar-item w3-button w3-hover-green">Online</a>
+                 <a href="#" class="w3-bar-item w3-button w3-hover-orange">Unavailable</a>
+                 <a href="#" class="w3-bar-item w3-button w3-hover-red">Offline</a>
+              </div>
+          </div>
+          <a id="logout" href="login" class="w3-margin-top w3-button w3-large w3-border w3-hover-red w3-margin-bottom w3-padding-large w3-round-xxlarge"> Log Off </a>
+      </div>
+  </div>
+  
+	<div class="w3-bar w3-top" style="background: white; line-height: 100%;">
+	<span class="w3-display-left">admin</span>
+	<span class="w3-right w3-display-middle w3-button w3-round-xxlarge w3-hover-blue w3-border">Status: Online <span style="color: green;">&#8226;</span></span>
+	<a id="logout" href="login.html" class="w3-button w3-border w3-hover-red w3-round-xxlarge w3-right"> Log Off </a>
 
-        function sidebar_open() {
-            document.getElementById("sidebar").style.display = "block";
-        }
-
-        function sidebar_close() {
-            document.getElementById("sidebar").style.display = "none";
-        }
-      </script>
+	</div>
+  
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('#logout').on('click', (function(e){
+      e.preventDefault()
+      window.location.replace("login.html");
+    }));
+  </script>
 </body>
 </html>

@@ -8,102 +8,123 @@
  </head>
 
 <body>
-    <!-- Sidebar -->
-<div class="w3-sidebar w3-animate-left w3-bar-block w3-border-right" style="display:none" id="sidebar">
-  <button onclick="sidebar_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <p class="w3-bar-item w3-xxlarge">Alice Peterson</p><br>
-  <a href="#" class="w3-bar-item w3-hover-green w3-xlarge w3-button">Start Break</a>
-  <a href="#" class="w3-bar-item w3-xlarge w3-hover-red w3-button">Log Off</a>
-</div>
-<button class="w3-button w3-round-xxlarge w3-white w3-margin-top w3-xlarge" style="border-radius: 0px 15px 15px 0px; "onclick="sidebar_open()">More</button>
-
-<!-- Page Content -->
-        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin: 2%">
+        <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin: 2%;">
                 <div class="w3-container w3-center w3-margin-bottom">
-                    <h1> Patrick Star <span class="w3-tag w3-deep-orange">Issue ID #8482.3</span> </h1>
+                    <h1> Patrick Star <span class="w3-tag w3-deep-orange">Issue ID #8482</span> </h1>
                 </div>
-                <div class="w3-padding w3-quarter" style="text-align: center;">
+                <div class="w3-padding w3-third" style="text-align: center;">
                     <h1> Info </h1>
-                    <ul class="w3-ul" style="text-align: left; overflow: auto; white-space: nowrap; max-height: 25rem;">
-                        <li>Assigned to: <br><b>Frank William Abagnale</b></li>
-                        <li>ID: <br><b> A1234</b></li>
-                        <li>Notes: <br><b>User cannot log into their account<br>Windows recognises credentials <br>Gets stuck on "Group Policy"</b></li>
-                        <li>Rating:<br><b><span class="w3-tag w3-orange">Medium Urgency</span></b></li>
-                        <li>Dept: <br><b>Project Accounting</b></li>
-                        <li>Pos: <br><b>Deputy Team Lead</b></li>
-                        <li>Mail: <br><b>p.star@makeitall.com</b></li>
-                        <li>Num: <br><b>07413012084</b></li>
-                        <li>Office: <br><b>Room 3.21</b></li>
-                        <li>Desktop Model: <br><b>HP Desk8300</b></li>
-                        <li>Desktop OS: <br><b>Windows 7 Pro</b></li>
-                        <li>Mobile Model: <br><b>Apple iPad Pro 12.9</b></li>
-                        <li>Mobile OS: <br><b>iOS 12.1.1</b></li>
-                        <li>Software: <br><b>AutoCAD ArduinoIDE NX11</b></li>
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
+                        <li>ID: <b> A1234</b></li>
+                        <li>Name: <b>Patrick Star</b></li>
+                        <li>Dept: <b>Project Accounting</b></li>
+                        <li>Role: <b>Deputy Team Lead</b></li>
+                        <li>Mail: <b>p.star@makeitall.com</b></li>
+                        <li>Num: <b>07413012084</b></li>
+                        <li>Office: <b>Room 3.21</b></li>
                     </ul>
+                    <h1> Known Hardware </h1>
+                    <ul class="w3-ul" style="text-align: left; overflow: scroll; white-space: nowrap; min-height: 15rem;">
+                        <li>Printers: <b>HP Desk8300</b></li>
+                        <li>Desktop OS: <b>Windows 7 Pro</b></li>
+                        <li>Mobile OS: <b>Apple iPad Pro 12.9</b></li>
+                        <li>Mobile OS: <b>iOS 12.1.1</b></li>
+                        <li>LSoft: <b>AutoCAD ArduinoIDE NX11</b></li>
+                        <li>USoft: <b>None</b></li>
                 </div>
-                <div class="w3-padding w3-quarter" style="text-align: center;">
-                    <h1> History </h1>
-                    <ul class="w3-ul" style="text-align: left; overflow: auto; white-space: nowrap; max-height: 25rem;">
-                        <li><span class="w3-tag w3-deep-orange">#8482</span> 14/04/18 - Main Issue<br>Type: <b>Software/Desktop/Login Issue </b></li>
-                        <li><span class="w3-tag w3-deep-orange">#8482.1</span> 16/04/18 - Update 1<br>Type: <b>Info Update </b><br>Made by: <b>Roger Federer A3241</b></li>
-                        <li><span class="w3-tag w3-deep-orange">#8482.2</span> 22/04/18 - Update 2 <br>Type: <b>Feedback Request </b><br>Made by: <b>Self</b></li>
-                    </ul>
-                </div>
-                <div class="w3-padding w3-quarter" style="text-align: center;">
-                    <h1> Origin </h1>
-                    <div class="w3-bar">
-                        <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-round-xxlarge"> Initial User </a>
-                        <a href="#" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-round-xxlarge"> Other User </a>
-
+                <div class="w3-padding w3-third" style="text-align: center;">
+                    <h1> Issue Definition </h1>
+                    <div class="w3-bar w3-border">
+							<div class="w3-button" style="display: inline-block;" id="up" onclick="upLevel();">Up</div>
+							<div class="w3-border" id="path" style="display: inline-block; width: 75%; text-align: left;">Hello there</div>                    
                     </div>
-                    <br><br>
-                    <h1> Reason </h1>
-                    <div class="w3-bar">
-                        <a href="new-call-done" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-round-xxlarge"> Information Update </a>
-                        <a href="new-call-done" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-round-xxlarge"> Feedback Request </a>
-                        <a href="new-call-done" class="w3-margin-top w3-button w3-large w3-border w3-hover-blue w3-round-xxlarge"> Remove Issue </a>
-
+                    
+                    <div id="issueBrowser" style="overflow-y: scroll; width:100%;">
+                    
                     </div>
-                </div>
-                <div class="w3-padding w3-quarter" style="text-align: center;">
-                    <h1> Extra Notes </h1>
+					
+					<div id="phonecalls"></div>
+					
+					
+                    </div>
+
+                    
+                <div class="w3-padding w3-third">
+                    <h1 style="text-align: center;"> Extra Notes </h1>
                     <form>
-                        <textarea style="width: 80%; height: 25rem; resize: none;" class="w3-center w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
+                        <textarea style="width: 100%; height: 15rem; resize: none;" class="w3-border w3-pale-yellow w3-round-large w3-padding" placeholder="- Separate sections by bullet points if writing more than one note"></textarea>
+						<p>Serial Number<input type='text' style="float: right;"></p>
+                        <p>Operating System<input type='text' style="float: right;"></p>
+                        <p>Software<input type='text' style="float: right;"></p>
                     </form>
                 </div>
                 <div class="w3-container w3-center w3-padding-top">
-                    <a href="recurring-call-issues.html" class="w3-margin-top w3-button w3-border w3-hover-red w3-margin-bottom w3-padding-large w3-round-xxlarge"> < Back </a>
-                    <a href="recurring-call-done.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Update Issue </a>
+                    <a href="new-call-ident.html" class="w3-margin-top w3-button w3-border w3-hover-red w3-margin-bottom w3-padding-large w3-round-xxlarge"> < Back </a>
+                    <a href="new-call-done.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Assign to Self </a>
+                    <a href="new-call-specialist.html" class="w3-margin-top w3-button w3-large w3-border w3-hover-green w3-margin-bottom w3-padding-large w3-round-xxlarge"> Assign to Specialist</a>
                     <br>
                     <p> Review data before next stage </p>
                 </div>
              </div>
+	<script src="../js/issues.js"></script>    
     <script>
-        function openMain(Name) {
-            var z;
-            var r = document.getElementsByClassName("folder");
-            for (z = 0; z < r.length; z++) {
-               r[z].style.display = "none";
-            }
-            document.getElementById(Name).style.display = "block";
+	loadPath([0,1]);
+	document.getElementById(1).className = "w3-button w3-bar w3-blue";
+    
+    var path = [0,1];
+    var pathname = "";
+        
+        function upLevel(){
+        		path.pop();
+        		loadPath(path);
         }
-        function openSub(subName) {
-            var i;
-            var x = document.getElementsByClassName("sub");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            document.getElementById(subName).style.display = "block";
+        
+        //This function adds items visually to the issueBrowser box
+        function addItem(item, index) {
+        		document.getElementById("issueBrowser").innerHTML += "<div class='w3-button w3-bar' id='"+index+"' onclick='openItem("+index+")'>"+item+"</div>";
         }
-
-                function sidebar_open() {
-                    document.getElementById("sidebar").style.display = "block";
-                }
-
-                function sidebar_close() {
-                    document.getElementById("sidebar").style.display = "none";
-                }
-              </script>
+        
+        //This opens items in the issueBrowser box
+        function openItem(item) {
+            if (path.length<2) {
+        			path[path.length] = item;
+        			loadPath(path);
+        		}
+        		else {
+        			loadPath(path);
+        			document.getElementById(item).className = "w3-button w3-bar w3-blue";
+        		}
+        }
+        
+        //this function takes an array of integers, to a maximum length of 2, and opens the corresponding file path
+        function loadPath(path){
+        		document.getElementById("issueBrowser").innerHTML = "";
+        		switch(path.length) {
+        			case 0:
+        				for (var x = 0; x<issues.length; x++) {
+        					addItem(issues[x][0], x);
+        				}
+        				pathname="/";
+        				break;
+        				
+        			case 1:
+        				for (var x = 1; x<issues[path[0]].length; x++) {
+        					addItem(issues[path[0]][x][0], x)
+        				}
+        				pathname="/"+issues[path[0]][0].toString()+"/";
+        				break;
+        				
+        			case 2:
+        				for (var x = 1; x<issues[path[0]][path[1]].length; x++) {
+        					addItem(issues[path[0]][path[1]][x], x)
+        				}
+        				pathname="/"+issues[path[0]][0]+"/"+issues[path[0]][path[1]][0];
+        				break;
+        		}
+        		document.getElementById("path").innerHTML = pathname;
+        		
+        }
+    </script>
 
 
 </body>
