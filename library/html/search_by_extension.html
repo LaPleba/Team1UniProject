@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Make-It-All Helpdesk</title>
@@ -50,14 +50,6 @@
       firebase.initializeApp(config);
     </script>
     <script type="text/javascript">
-        db = firebase.firestore();
-        db.settings({
-          timestampsInSnapshots: true
-        });
-        db.collection("tasks").doc("1111111").set({
-            id: 1111111,
-            name: "Problemo"
-        });
 
         $('#employeeidinput').on('keydown', function (e){
         		if (e.keyCode == 13) {
