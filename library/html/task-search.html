@@ -20,11 +20,7 @@
         <!-- Page Content -->
 
         <div class="w3-card w3-white w3-padding w3-row w3-round-xlarge" style="margin: 2%;">
-            <div class="w3-row ">
-                <a href="main.html" class="w3-button w3-border w3-hover-red w3-padding-large w3-round-xxlarge"> < Back </a>
-
-            </div>
-                <div class="barContainer w3-half w3-padding">
+                <div class="barContainer w3-half w3-padding" style="text-align: center;">
                     <h1>Search</h1>
                     <form>
                         <input class="taskSearchBox" type="text">
@@ -34,23 +30,40 @@
                         <div class="searchResults"></div>
                     </div>
                 </div>
-                <div class="tagContainer w3-half w3-padding">
-                    <ul class="w3-ul tagList">
-                        <h1> Calls </h1>
-                        <span> <i>Search by... </i></span>
+                <div class="tagContainer w3-half w3-padding w3-margin-bottom">
+                    <div class="w3-margin-bottom" style="text-align: center;">
+                        <h1> All Calls </h1>
+                        <span> <i>Filter by... </i></span>
                         <a href="#" class="w3-button w3-hover-orange w3-round-xlarge">Date Assigned</a>
                         <a href="#" class="w3-button w3-hover-orange w3-round-xlarge">Date Due</a>
                         <a href="#" class="w3-button w3-hover-orange w3-orange w3-round-xlarge">Categories</a>
                         <a href="#" class="w3-button w3-hover-orange w3-round-xlarge">Priority</a>
                         <a href="#" class="w3-button w3-hover-orange w3-round-xlarge">Updates Given</a>
-                        <ul class="w3-ul w3-margin-top" style="text-align: right; overflow: auto; white-space: nowrap; max-height: 30rem;">
-                              <li><a href="existing-call.html" class="w3-btn ticket-orange"> <b>Software/DesktopOS/Login Issue </b></a></li>
-                              <li><a href="existing-call.html" class="w3-btn ticket-red"><b>Hardware/Desktop/Driver Issue</b></a></li>
-                              <li><a href="existing-call.html" class="w3-btn ticket-red"><b> Software/Network/Cloud </b></a></li>
-                          <li><a href="existing-call.html" class="w3-btn ticket-yellow"> <b>Software/M-OS/Update Issue</b></a></li>
-                        </ul>
+                    </div>
+                    <ul class="w3-ul tagList" style="overflow: auto; white-space: nowrap; max-height: 30rem;">
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-red"><span class="w3-tag w3-left w3-deep-orange">Issue ID #4463</span><b> Hardware/Desktop/Driver Issue</b> <span class="w3-tag w3-pale-blue w3-right w3-round-xlarge">Due in <b>3 hours </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"><span class="w3-tag w3-left w3-deep-orange">Issue ID #2552</span><b> Hardware/Desktop/Won't Turn On</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>2 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-red"><span class="w3-tag w3-left w3-deep-orange">Issue ID #4463</span><b> Hardware/Desktop/Driver Issue</b> <span class="w3-tag w3-pale-blue w3-right w3-round-xlarge">Due in <b>3 hours </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-red"><span class="w3-tag w3-left w3-deep-orange">Issue ID #4463</span><b> Hardware/Desktop/Driver Issue</b> <span class="w3-tag w3-pale-blue w3-right w3-round-xlarge">Due in <b>3 hours </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"><span class="w3-tag w3-left w3-deep-orange">Issue ID #1123</span><b> Software/Mobile OS/Update Issue</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>3 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #3466</span><b> Software/Projector/Bulb Warning</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>5 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #2355</span><b> Hardware/Printer/Won't Turn On</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>1 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #8867</span><b> Software/Programs/Licensing</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>4 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"><span class="w3-tag w3-left w3-deep-orange">Issue ID #1123</span><b> Software/Mobile OS/Update Issue</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>3 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #3466</span><b> Software/Projector/Bulb Warning</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>5 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #2355</span><b> Hardware/Printer/Won't Turn On</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>1 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"><span class="w3-tag w3-left w3-deep-orange">Issue ID #1123</span><b> Software/Mobile OS/Update Issue</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>3 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #3466</span><b> Software/Projector/Bulb Warning</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>5 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #2355</span><b> Hardware/Printer/Won't Turn On</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>1 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-orange"><span class="w3-tag w3-left w3-deep-orange">Issue ID #1123</span><b> Software/Mobile OS/Update Issue</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>3 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #3466</span><b> Software/Projector/Bulb Warning</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>5 days </b></span></a></li>
+                      <li><a href="recurring-call-main.html" class="w3-btn ticket-yellow"><span class="w3-tag w3-left w3-deep-orange">Issue ID #2355</span><b> Hardware/Printer/Won't Turn On</b> <span class="w3-tag w3-right w3-pale-blue w3-round-xlarge">Due in <b>1 days </b></span></a></li>
                     </ul>
                 </div>
+                <div class="w3-row w3-center">
+                    <a href="main.html" class="w3-button w3-border w3-hover-red w3-padding-large w3-round-xxlarge"> < Back </a>
+                </div>
+            </div>
 
     </body>
     <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
